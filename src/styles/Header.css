@@ -1,0 +1,13 @@
+.header {
+  background: #b71775;
+  height: 250px;
+  background-image: url('https://avante.biz/wp-content/uploads/Backgrounds-Stars/Backgrounds-Stars-002.jpg');
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 75px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
