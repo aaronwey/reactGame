@@ -1,31 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Section from './components/Section';
-import Navbar from './components/Navbar';
+import pics from './pics.json';
 
+class App extends React.Component {
+  // Setting the initial state of the Counter component
+	state = {
+	    count: 0,
+	    pics
+	};
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
+	handleIncrement = () => {
+		this.setState({ count: this.state.count + 1 });
+	};
 
-const App = () => (
-  <div>
-    <Navbar />
-    <Header />
-    <Section />
-  </div>
-);
+	render(){
+		return(
+			<div>
+				<Navbar 
+					count={this.state.count}
+					handleIncrement={this.handleIncrement}
+				/>
+				<Header />
+				{this.state.pics.map(pic => (
+					<Section
+						handleIncrement={this.handleIncrement}
+						id={pic.id}
+						key={pic.id}
+						name={pic.name}
+						image={pic.image}
+					/>
+				))}
+			</div>
+		);
+	}
+}
 
 export default App;

@@ -10,3 +10,13 @@ img {
 /*    border: 3px solid green;
     padding: 10px;*/
 }
+
+
+.clickItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+  }
+
+.clickItem {
+	border: 5px solid #f1f1f1;
+}

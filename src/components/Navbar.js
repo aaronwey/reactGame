@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => (
+const Navbar = props => (
 	<nav className="navbar navbar-toggleable-md sticky-top navbar-light bg-faded" style={{backgroundColor: "#e3f2fd"}}>
 	  <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	    <span className="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@ const Navbar = () => (
 	      </li>
 	    </ul>
 	    <span className="navbar-text">
-	      Navbar text with an inline element
+	      Score: {props.count}
 	    </span>
 	  </div>
 	</nav>
