@@ -15,12 +15,14 @@ class App extends React.Component {
 	
 
 	handleIncrement = id => {
-		
-		let clicked = this.state.clicked.concat(id);
+
+		let clicked = this.state.clicked.includes(id) ? this.state.clicked = [] : this.state.clicked.concat(id);
 		this.setState({ clicked });
-		console.log(clicked);
-		this.setState({ count: this.state.count + 1 });
+		console.log(clicked.length);
+		this.setState({ count: this.state.clicked.length });
 	};
+
+
 
 	render(){
 		return(
