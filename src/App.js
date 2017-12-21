@@ -16,13 +16,12 @@ class App extends React.Component {
 
 	handleIncrement = id => {
 
-		let clicked = this.state.clicked.includes(id) ? this.state.clicked = [] : this.state.clicked.concat(id);
-		this.setState({ clicked });
-		console.log(clicked.length);
-		this.setState({ count: this.state.clicked.length });
+		let clicked = this.state.clicked.includes(id) ? (this.state.clicked.splice(0), clicked=this.state.clicked) : this.state.clicked.concat(id);
+		this.setState({ clicked: clicked });
+		console.log(this.state.clicked);
+		console.log(clicked);
+		this.setState({ count: clicked.length });
 	};
-
-
 
 	render(){
 		return(
@@ -34,9 +33,7 @@ class App extends React.Component {
 				<Header />
 				{this.state.pics.map(pic => (
 					<Section
-						handleIncrement={this.handleIncrement}
-						saveClicked={this.saveClicked}
-						clicked={this.clicked}
+						handleIncrement={this.handleIncrement}						
 						id={pic.id}
 						key={pic.id}
 						name={pic.name}
