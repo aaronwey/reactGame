@@ -21,7 +21,12 @@ class App extends React.Component {
 		console.log(this.state.clicked);
 		console.log(clicked);
 		this.setState({ count: clicked.length });
+		const shuffled = pics.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
+		this.setState ({ pics: shuffled })
+	    
 	};
+
+
 
 	render(){
 		return(
