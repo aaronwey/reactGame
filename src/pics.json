@@ -18,5 +18,26 @@
 		"id": 4,
 		"name": "bubbs",
 		"image": "http://i.cdn.turner.com/v5cache/CARTOON/site/Images/i18/propd_at_char_princbubb.png"
-	}	
+	},
+	{
+		"id": 5,
+		"name": "BMO",
+		"image": "https://static.giantbomb.com/uploads/square_small/13/135472/2330558-bmo.png"
+	},
+	{
+		"id": 6,
+		"name": "heart guy",
+		"image": "https://vignette3.wikia.nocookie.net/adventuretimewithfinnandjake/images/b/bb/S4ricardio.png/revision/latest?cb=20120908054951"
+	},
+	{
+		"id": 7,
+		"name": "leaf guy",
+		"image": "https://static.giantbomb.com/uploads/square_small/13/135472/2330562-donny.png"
+	},
+	{
+		"id": 8,
+		"name": "Ice King",
+		"image": "http://i.cdn.turner.com/v5cache/CARTOON/site/Images/i18/propd_at_char_iceking.png"
+	}
+
 ]
